@@ -8,6 +8,7 @@ import { createStore } from './store.js';
 const PUBLIC=fileURLToPath(new URL('../public/',import.meta.url));
 const STATIC={'/':['index.html','text/html; charset=utf-8'],'/app.js':['app.js','text/javascript; charset=utf-8'],'/map.js':['map.js','text/javascript; charset=utf-8'],'/catalog.js':['catalog.js','text/javascript; charset=utf-8'],'/styles.css':['styles.css','text/css; charset=utf-8']};
 STATIC['/client-utils.js']=['client-utils.js','text/javascript; charset=utf-8'];
+for(const file of ['world-model.js','world-sprites.js','world-view.js'])STATIC['/'+file]=[file,'text/javascript; charset=utf-8'];
 class HTTPError extends Error {constructor(status,message){super(message);this.status=status;}}
 async function readJSON(req) {
   if(!req.headers['content-type']?.startsWith('application/json'))throw new HTTPError(415,'Нужен JSON');
