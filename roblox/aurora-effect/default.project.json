@@ -1,0 +1,17 @@
+{
+  "name": "aurora-effect",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "AuroraEffect": { "$path": "src/ReplicatedStorage/AuroraEffect" }
+    },
+    "ServerScriptService": {
+      "AuroraServer": { "$path": "src/ServerScriptService/AuroraServer.server.luau" }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "AuroraClient": { "$path": "src/StarterPlayer/StarterPlayerScripts/AuroraClient.client.luau" }
+      }
+    }
+  }
+}
